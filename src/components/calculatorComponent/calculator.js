@@ -3,7 +3,6 @@ import { withRouter } from "react-router-dom";
 import { Row, Col, Input, Button } from 'reactstrap';
 import { Switch, FormGroup, Typography, Grid } from '@material-ui/core';
 import { CALCULATOR_BUTTONS } from '../constants';
-import { lightTheme } from './theme';
 import './calculator.css';
 
 function CalculatorComponent() {
@@ -23,7 +22,6 @@ function CalculatorComponent() {
     const [darkThemeOn, setDarkTheme] = useState(false);
     const [backgroundTheme, setBackgroundTheme] = useState('lightBackground background');
     const [buttonTheme, setButtonTheme] = useState('lightButton Button');
-    const [textTheme, setTextTheme] = useState('lightText Text');
 
     function calculateTheResult(x) {
 
@@ -134,14 +132,12 @@ function CalculatorComponent() {
             setDarkTheme(false);
             setBackgroundTheme('lightBackground background');
             setButtonTheme('lightButton Button');
-            setTextTheme('lightText Text');
-
+            
         }
         else {
             setDarkTheme(true);
             setBackgroundTheme('darkBackground background');
             setButtonTheme('darkButton Button');
-            setTextTheme('darkText Text');
         }
     }
 
